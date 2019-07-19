@@ -8,6 +8,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 
 //这个配置文件 其实就是一个js文件通过node 中的操作 向外暴露了一个配置对象
 module.exports = {
+    
     entry:path.join(__dirname,'./src/index.js'),//入口 表示 要使用webpack打包哪个文件
     output:{
         path:path.join(__dirname,'./dist'),  //指定打包到哪个目录去，
@@ -45,6 +46,7 @@ module.exports = {
         new VueLoaderPlugin(),
         
     ],
+    
     
 
 

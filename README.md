@@ -5,35 +5,31 @@
 #### 介绍
 Vue项目
 
-#### 软件架构
-软件架构说明
 
 
-#### 安装教程
-
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 使用说明
-
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 参与贡献
-
-1. Fork 本仓库
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
+## 制作首页APP组件
+1.完成header区域 ，使用的是 mint ui 中的header组件
+2.制作底部的tabbar 区域 使用的mui的 tabber.html
+    + 在制作购物车 小图标的时候 操作会相对多一些：
+    + 先把 扩展的图标css样式要拷贝到项目中
+    + 拷贝扩展字体库 ttf 文件到项目中
+    + 为购物车 小图片添加扩展如下样式 mui-icon mui-icon-extra mui-icon-extra-cart
+3.要在 中间区域放置一个 router-view 展示中间部分 
 
 
-#### 码云特技
 
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+## 改造 tabbar 为router-link
+
+## 设置路由高亮
+
+## 点击tabbar 中的路由链接 展示对应的路由组件
+
+## 制作首页轮播图布局
+
+## 加载首页轮播图数据
+1.获取数据  如何获取 使用vue-resource
+2.使用Vue-resource 的this.$http.get获取数据
+3.获取到的数据，要保持到 data 身上
+4。使用v-for 循环渲染每个item项目
+
+## 改造九宫格
