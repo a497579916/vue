@@ -10,15 +10,30 @@ import router from './router.js'      //1.3.导入自己的路由模块
 import VueResource from 'vue-resource' //2.1导入vue-resource
 Vue.use(VueResource)                    //2.2 安装 vue-resource
 
+Vue.http.options.root = 'http://www.liulongbin.top:3005'             //设置请求的根路径
 
-
-import { Header ,Swipe, SwipeItem } from 'mint-ui';  //引入 mint-ui组件  按需引入
+import { Header ,Swipe, SwipeItem ,Button} from 'mint-ui';  //引入 mint-ui组件  按需引入
 Vue.component(Header.name, Header); //注册组件
 Vue.component(Swipe.name, Swipe);    //注册组件
 Vue.component(SwipeItem.name, SwipeItem); //注册组件
+Vue.component(Button.name, Button);//注册组件
+
+import { Spinner } from 'mint-ui';
+Vue.component(Spinner.name, Spinner);
 
 import './lib/mui/css/mui.css'    //引入 mui的 css
 import './lib/mui/css/icons-extra.css'  //引入 mui 扩展图标
+
+Vue.filter('time',function(data){  //注册一个全局时间过滤器
+  var dt=new Date(data);
+  var y = dt.getFullYear();
+  var mon = dt.getMonth().toString().padStart(2,'0');
+  var d = dt.getDate().toString().padStart(2,'0');
+  var h = dt.getHours().toString().padStart(2,'0');
+  var m = dt.getMinutes().toString().padStart(2,'0');
+  var s = dt.getSeconds().toString().padStart(2,'0');
+  return `${y}-${mon}-${d} ${h}:${m}:${s}`
+});
 
 
 new Vue({
@@ -26,4 +41,5 @@ new Vue({
   render: c => c(App),
   router:router //1.4. 挂载路由到vm实例上
 })
+
 
