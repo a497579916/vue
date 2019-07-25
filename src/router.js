@@ -6,17 +6,32 @@ import ShopcarContainer from './companies/tabbar/Shopcarc.vue'
 import SearchContainer from './companies/tabbar/Searchc.vue'
 import NewsList from './companies/news/NewsList.vue'
 import NewsInfo from './companies/news/NewsInfo.vue'
+import PhotoList from './companies/photos/PhotoList.vue'
+import PhotoInfo from './companies/photos/PhotoInfo.vue'
+import GoodsList from './companies/goods/GoodsList.vue'
+import GoodsInfo from './companies/goods/GoodsInfo.vue'
+import GoodsDesc from './companies/goods/GoodsDesc.vue'
+import GoodsComment from './companies/goods/GoodsComment.vue'
 
 
 var router = new VueRouter({
     routes: [ //配置路由规则
         { path: '/', redirect: '/home' },
         { path: '/home', component: HomeContainer },
+        { path: '/home/newslist', component: NewsList},
+        { path: '/home/newsinfo/:id', component: NewsInfo},
         { path: '/member', component: MemberContainer },
         { path: '/shopcar', component: ShopcarContainer },
         { path: '/search', component: SearchContainer },
-        { path: '/home/newslist', component: NewsList},
-        { path: '/home/newsinfo/:id', component: NewsInfo},
+        { path: '/home/photolist', component: PhotoList },
+        { path: '/home/PhotoInfo/:id', component: PhotoInfo },
+        { path: '/home/GoodsList', component: GoodsList },
+        { path: '/home/goodsinfo/:id', component: GoodsInfo },
+        { path: '/home/goodsdesc/:id', component: GoodsDesc ,name:'goodsdesc'},
+        { path: '/home/goodscomment/:id', component: GoodsComment ,name:'goodscomment'}
+
+
+        
         
 
     ],
