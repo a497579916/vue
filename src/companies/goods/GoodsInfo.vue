@@ -145,7 +145,7 @@ export default {
         getSelectedCount(count){
             //当子组件把选中的数量 传递给 父组件的时候，把选中的值保存到data上
             this.SelectedCount = count;
-            console.log('值为' + this.SelectedCount)
+           
         }
 
 

@@ -22,7 +22,7 @@ module.exports = {
             //配置处理 less 的第三方loader
             {test:/\.scss$/,use:['style-loader','css-loader','sass-loader']},
             //配置处理 sass的第三方 loader
-            {test:/\.(jpg|png|gif|bmp|jpeg)$/,use:'url-loader?limit=7100&name=[hash:8]-[name].[ext]'},
+            {test:/\.(jpg|png|gif|bmp|jpeg)$/,use:'url-loader?limit=20000&name=[hash:8]-[name].[ext]'},
             
             {test:/\.js$/,use:'babel-loader',exclude:/node_modules/},
 

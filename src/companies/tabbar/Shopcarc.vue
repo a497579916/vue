@@ -34,7 +34,7 @@
                             <p>总计(不含运费)</p>
                             <p>已勾选商品 <span class="red">{{ $store.getters.getGoodsCountAndAmount.count }}</span> 件,总价 ￥  <span class="red">{{ $store.getters.getGoodsCountAndAmount.amount }}</span> </p>
                         </div>
-                        <mt-button type="danger">去结算</mt-button>
+                        <mt-button type="danger" @click="tishi">去结算</mt-button>
 					</div>
                     
 				</div>
@@ -45,6 +45,7 @@
 
 
 <script>
+import { Toast } from "mint-ui";
 import numbox from '../subcomponents/shopcar_numbox.vue'
 export default {
     data(){
@@ -81,6 +82,9 @@ export default {
             // console.log(id,value)
             this.$store.commit('updateGoodsSelected',{id:id,selected:val});
             
+        },
+        tishi(){
+            Toast('等待开发')
         }
     },
     components:{

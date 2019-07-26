@@ -42,19 +42,22 @@ import swiper from '../subcomponents/swiper.vue'
 export default {
     data(){
         return {
-            lunbotuList:[],//保存轮播i图的数组
+            lunbotuList:[{"id":1,"img":"http://img2.a0bi.com/upload/ttq/20150509/1431134012326.jpg","msg":""},
+        {"id":2,"img":"https://desk-fd.zol-img.com.cn/t_s1366x768c5/g2/M00/01/04/ChMlWl01IDqIBVOpAAMrNjO954YAAL-hgEv9cgAAytO394.jpg"},
+        {"id":3,"img":"https://desk-fd.zol-img.com.cn/t_s1366x768c5/g5/M00/09/0F/ChMkJ1sD_zyIf0wUAAP3iWjtWAsAAoiWwOhOfoAA_eh287.jpg"},
+        {"id":4,"img":" https://desk-fd.zol-img.com.cn/t_s1366x768c5/g5/M00/09/0F/ChMkJlsD_zyIJj1kAAMvTsEzzhUAAoiWwOaeHkAAy9m325.jpg"}],//保存轮播i图的数组
             img:[]
         }
     },
     created(){
-        this.getLunbotu()
+        // this.getLunbotu()
     },
     methods:{
         getLunbotu(){//获取轮播图数据的方法
-           this.$http.get('/companies/tabbar/img.json').then(result=>{
-                this.lunbotuList = result.body.message
-                console.log(result)
-           })
+        //    this.$http.get('/companies/tabbar/img.json').then(result=>{
+        //         this.lunbotuList = result.body.message
+        //         console.log(result)
+        //    })
             // this.$http.get('api/getlunbo').then(result => {
             //     console.log(result)
             //     if(result.body.status === 0 ){
