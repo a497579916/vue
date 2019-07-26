@@ -112,6 +112,16 @@ export default {
         addToShopCar(){
             //添加到购物车
             this.flag = !this.flag;
+            //拼接出一个要保存到store中的car对象
+            var goodsinfo = {
+                id:this.id,
+                count:this.SelectedCount,
+                price:this.goodsinfo.sell_price,
+                selected:true
+            }
+                //调用store 中的  addtoCar push进去
+            this.$store.commit("addToCar",goodsinfo);
+
         },
         beforeEnter(el){
             el.style.transform = "translate(0, 0)"
