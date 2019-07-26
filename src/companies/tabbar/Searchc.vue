@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3> search</h3>
+        <iframe src="/zj" frameborder="0"></iframe>
     </div>
 </template>
 
