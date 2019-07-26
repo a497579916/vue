@@ -80,6 +80,7 @@ export default {
 <style lang="scss" scoped>
 
 .mui-grid-view.mui-grid-9 {
+    // height: 200px;
     background-color: #fff;
     img{
         width: 60px;

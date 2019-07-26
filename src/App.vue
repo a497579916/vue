@@ -1,15 +1,16 @@
 <template>
-    <div class="app-container">
+    <div class="container">
         <mt-header fixed title="李津的Vue小项目">
 			 <span slot="left" @click="goBack" v-show="flag">
 				<mt-button icon="back">返回</mt-button>
 			</span>
 		</mt-header>
         <!-- 顶部header区 -->
-        
-		<transition>
-			<router-view></router-view>
-		</transition>
+        <div class="app-container">	
+			<transition>
+				<router-view></router-view>
+			</transition>
+        </div>	
 		
 		
 		
@@ -48,7 +49,7 @@ export default {
 		}
 	},
 	created(){
-		this.flag = this.$route.path === '/home' ? false : true
+		this.flag = this.$route.path === '/home' ? false : true;
 	},
 	methods:{
 		goBack(){
@@ -71,14 +72,16 @@ export default {
 	.mint-header{
 		z-index: 99;
 	}
+	.container{
+		/* 顶上的状态蓝固定定位 */
+		padding-top: 40px;
+		/* 底线的nav绝对定位 */
+		padding-bottom: 50px;
+	}
     .app-container{
-        padding-top:40px;
-        padding-bottom: 40px;
-		overflow-x: hidden;
+        overflow-x: hidden;
     }
-    .mint-header{
-        // background-color: red
-    }
+ 
 	.v-enter{
 		opacity: 0;
 		transform: translateX(100%);
