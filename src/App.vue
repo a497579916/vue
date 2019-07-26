@@ -29,10 +29,10 @@
 				</span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
-			<router-link class="mui-tab-item-lijin" to="/search">
+			<a class="mui-tab-item-lijin" href="http://www.cqbiaobai.top/zj">
 				<span class="mui-icon mui-icon-contact"></span>
 				<span class="mui-tab-label">登录</span>
-			</router-link>
+			</a>
 		</nav>
         <!-- 中间 路由区 -->
         
